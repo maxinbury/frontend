@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom"
 import servicioLotes from '../services/lotes'
 import servicioCuotas from '../services/cuotas'
 import React, { useEffect, useState, Fragment } from "react";
-
+import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import SearchIcon from '@mui/icons-material/Search';
 import Button from '@mui/material/Button';
 import MUIDataTable from "mui-datatables";
 import TextField from '@mui/material/TextField';
@@ -54,6 +55,21 @@ const LotesCliente = (props) => {
 
     }
 
+
+    function CutomButtonsRenderer(dataIndex, rowIndex, data, onClick) {
+        return (
+          <>
+            <CurrencyExchangeIcon 
+             onClick={() =>  navigate('/usuario2/pagarcuota/'+cuotas[dataIndex].id)}
+              style={{ marginRight: "10px", cursor: "pointer" }}
+            />
+            <SearchIcon style={{ cursor: "pointer" }} 
+            onClick={() =>  navigate('')  }//Navigate('usuario2/detallecliente'+clients[dataIndex].cuil_cuit)
+            />
+          </>
+        );
+      }
+
     const columns = [
         {
             name: "mes",
@@ -91,7 +107,19 @@ const LotesCliente = (props) => {
 
         },
 
-
+        {
+            name: "Actions",
+            options: {
+                customBodyRenderLite: (dataIndex, rowIndex) =>
+                    CutomButtonsRenderer(
+                        dataIndex,
+                        rowIndex,
+                       // overbookingData,
+                       // handleEditOpen
+                    )
+            }
+        
+        },   
 
 
 

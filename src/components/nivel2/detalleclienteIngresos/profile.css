@@ -1,0 +1,23 @@
+.profile-form-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .profile-edit-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    font-style: normal;
+    font-weight: 400;
+  }
+h5{
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 6px;
+    margin-bottom: 16px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #777777;
+  }  

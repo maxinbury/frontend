@@ -1,6 +1,8 @@
 import axios from "axios"
 
 const baseUrl = 'http://52.203.247.51:4000/prueba'
+//const  baseUrl ='http://localhost:4000/prueba'
+
 let token = null
 
 const setToken = newToken =>{

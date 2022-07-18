@@ -1,6 +1,16 @@
 import axios from "axios"
-
 const  baseUrl = 'http://52.203.247.51:4000/'
+//const  baseUrl = 'http://localhost:4000/'
+
+const pagarnivel2= async  (pago) => {
+  console.log(pago)
+// pago nivel 1
+// const {data } = await axios.post(baseUrl+'usuario1/realizarr',(pago))
+   
+ 
+}  
+
+
 
 const pagar= async  (pago) => {
    console.log(pago)
@@ -43,4 +53,4 @@ const pagosinusuales= async  () => {
  return data
 }  
 
-export default { pagar,pagosinusuales,aprobaciones,aprobarpago,rechazararpago};
+export default { pagar,pagosinusuales,aprobaciones,aprobarpago,rechazararpago,pagarnivel2};
